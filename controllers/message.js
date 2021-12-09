@@ -5,7 +5,7 @@ const post = {
 
         let { lastname, firstname, email, message } = req.body;
 
-        if(!lastname || !firstname || !email || !message) {res.send("emptyfield")};
+        if(!lastname || !firstname || !email || !message) {res.status(404).send("Tout les champs ne sont pas remplis")};
 
         Contact.create({
             lastname,
